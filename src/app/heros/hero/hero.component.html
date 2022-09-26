@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+
+<dl>
+    <td>Nombre: </td>
+    <dd>{{heroName}}</dd>
+
+    <td>Edad: </td>
+    <dd>{{heroAge}}</dd>
+
+    <td>Función: </td>
+    <dd>{{obtainData()}}</dd>
+
+    <td>Nombre en mayúscula: </td>
+    <dd>{{heroNameToUpperCase}}</dd> <!--Llama a la función de tipo "get". Este "get" se comporta más como atributo que como función -->
+</dl>
+
+<button (click)="changeHeroName()">Cambiar Héroe</button>
+<button (click)="changeHeroAge()">Cambiar Edad</button>

@@ -1,0 +1,28 @@
+<h1>Listado de Héroes</h1>
+
+<button (click)="addLastHero()"> Añadir Último Héroe</button>
+<button (click)="removeLastHero()"> Eliminar Último Héroe</button>
+
+<ul>
+    <!--Directiva "ngFor": Multiplica el componente del que se invoca según el número de elementos a iterar -->
+    <li *ngFor="let hero of heros; let i = index"> <!--"hero" es un elemento de la lista "heros" bindeada por la propiedad de la clase (heros). "index" está reservado para el index del listado -->
+        {{i + 1}} -> {{hero}}
+    </li>
+</ul>
+
+<!--
+    Directiva "ngIf": Solo se crea el componente si se cumple la condición
+    "ngIf" se puede usar en un elemento html normal o en un "ng-container" que actuará como bloque "if-else"
+    Si se activara el "else" este viene definido tras el punto y coma del "ngIf"
+-->
+<ng-container *ngIf="lastHeroAddedOrRemoved !== false; else elseTemplate">
+    <div>
+        <h3>Último Héroe añadido o borrado: <small>{{lastHeroAddedOrRemoved}}</small></h3>
+    </div> 
+</ng-container>
+<!-- El "ng-template" muestra un elemento especial para el html. Se le puede dar un identificador tras el "#", de esta forma puede ser invocado por otros elementos del html de forma local -->
+<ng-template #elseTemplate>
+    <div>
+        <h3>Aún no se ha añadido o borrado un héroe</h3>
+    </div>
+</ng-template>
