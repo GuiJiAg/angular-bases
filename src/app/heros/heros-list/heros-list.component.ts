@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Constants } from '../../utils/constants';
 
 const HERO_NAME_0 = 'Ironman';
 const HERO_NAME_1 = 'Spiderman';
@@ -10,8 +11,6 @@ const HERO_LIST = [
   HERO_NAME_2,
   HERO_NAME_3
 ];
-const ZERO = 0;
-const ONE = 1;
 
 @Component({
   selector: 'app-heros-list',
@@ -50,11 +49,11 @@ export class HerosListComponent implements OnInit {
   removeLastHero(): void {
     let lastIndex: number = this.heros.length;
 
-    if (lastIndex !== ZERO) {
-      let currentIndex: number = lastIndex - ONE;
+    if (lastIndex !== Constants.ZERO) {
+      let currentIndex: number = lastIndex - Constants.ONE;
 
       this.lastHeroAddedOrRemoved = this.heros[currentIndex];
-      this.heros.splice(currentIndex, ONE);
+      this.heros.splice(currentIndex, Constants.ONE);
     }
   }
 }

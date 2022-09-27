@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { Constants } from 'src/app/utils/constants';
 
 const TITLE = 'Héroes';
 const HERO_NAME_1 = 'Ironman';
 const HERO_NAME_2 = 'Spiderman';
 const HERO_AGE_1 = 35;
 const HERO_AGE_2 = 27;
-const SPACE = ' ';
-const SLASH = '-';
 
 @Component({
     selector: 'app-hero',
@@ -20,9 +19,9 @@ export class HeroComponent {
     obtainData(): string {
         return `
             ${this.heroName}
-            ${SPACE}
-            ${SLASH}
-            ${SPACE}
+            ${Constants.SPACE}
+            ${Constants.SLASH}
+            ${Constants.SPACE}
             ${this.heroAge}
         `;
     }

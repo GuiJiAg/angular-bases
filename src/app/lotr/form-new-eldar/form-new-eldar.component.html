@@ -1,0 +1,18 @@
+<h3>Add</h3>
+<hr />
+
+<form (ngSubmit)="addEldar()">
+    <input
+        name="newEldarName"
+        type="text" 
+        placeholder="Name"
+        [(ngModel)]="newEldar.eldarName"
+    />
+    <input
+        name="newEldarPower"
+        type="number" 
+        placeholder="Power" 
+        [(ngModel)]="newEldar.eldarPower" 
+    />
+    <button type="submit">Add</button>
+</form>

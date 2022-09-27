@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
+import { Constants } from '../utils/constants';
+
 const TITLE = 'Contador App'
-const ZERO_NUMBER = 0;
 const CURRENT_BASE = 1;
 
 @Component({
@@ -11,7 +12,7 @@ const CURRENT_BASE = 1;
 export class CounterComponent {
     public title: string = TITLE;
     public base: number = CURRENT_BASE;
-    public counter: number = ZERO_NUMBER;
+    public counter: number = Constants.ZERO;
 
     /*
         NOTA: No es necesario devolver el valor de las operaciones con un "return",

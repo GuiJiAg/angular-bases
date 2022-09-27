@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HerosModule } from './heros/heros.module';
 import { CounterModule } from './counter/counter.module';
+import { LotrModule } from './lotr/lotr.module';
 
 @NgModule({
   //Componentes agrupados en este módulo
@@ -14,7 +15,8 @@ import { CounterModule } from './counter/counter.module';
   imports: [
     BrowserModule,
     CounterModule,
-    HerosModule
+    HerosModule,
+    LotrModule
   ],
   providers: [],
   bootstrap: [AppComponent]

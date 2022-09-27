@@ -1,0 +1,9 @@
+<h3>Eldars</h3>
+<hr />
+<ul>
+    <li *ngFor="let eldar of eldars">
+        {{eldar.eldarName}}
+        {{printSpaceAndSlash()}}
+        {{eldar.eldarPower | number}} <!--El pipe "| number" le da formato de número al valor de su izquierda-->
+    </li>
+</ul>
