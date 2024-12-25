@@ -33,5 +33,16 @@ export class Constants {
   public HERO_NOT_DELETED: string = 'No hay héroes borrados';
   public HEROES_LIST_EXAMPLE_VALUES: string[] = ['Spiderman', 'Ironman', 'Thor', 'Hulk'];
 
+  /* DBZ STAFF */
+  public DBZ_MAIN_PAGE_TITLE_TEXT: string = 'Main DBZ Page';
+  public DBZ_MAIN_PAGE_SUBTITLE_TEXT: string = 'DBZ Personajes';
+  public DBZ_MAIN_PAGE_LIST_TITLE_TEXT: string = 'Listado:';
+  public DBZ_MAIN_PAGE_FIRST_HERO_NAME: string = 'Goku';
+  public DBZ_MAIN_PAGE_FIRST_HERO_POWER: number = 10000;
+  public DBZ_MAIN_PAGE_SECOND_HERO_NAME: string = 'Krillin';
+  public DBZ_MAIN_PAGE_SECOND_HERO_POWER: number = 500;
+  public DBZ_MAIN_PAGE_FORM_TITLE_TEXT: string = 'Agregar Personaje:';
+  public DBZ_MAIN_PAGE_ADD_BUTTON_TEXT: string = 'Agregar';
+
   constructor() {}
 }
