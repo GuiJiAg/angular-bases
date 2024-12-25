@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { Constants } from './Utils/constants';
+
+const {
+  MAIN_TITLE
+} = new Constants();
 
 @Component({
   selector: 'app-root',
@@ -7,5 +12,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bases';
+  public title: string = MAIN_TITLE;
 }

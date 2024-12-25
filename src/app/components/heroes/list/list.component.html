@@ -1,0 +1,38 @@
+<h3>{{title}}</h3>
+
+<ul class="mt-2 list-group">
+  <li
+    *ngFor="let hero of heroesList"
+    class="list-group-item"
+  >
+    {{hero}}
+  </li>
+</ul>
+
+<button
+  *ngIf="!heroesListIsEmpty"
+  class="btn btn-outline-danger  mx-2"
+  (click)="deleteLastHero()"
+>
+  {{deleteLastHeroButtonText}}
+</button>
+<button
+  *ngIf="existDeletedHeroes"
+  class="btn btn-primary"
+  (click)="resetList()"
+>
+  {{resetHeroeslistButtonText}}
+</button>
+
+<div>
+  <h4 *ngIf="existDeletedHeroes; else noExistDeletedHeroes">
+    {{heroDeletedText}}&nbsp;
+    <small class="text-danger">
+      {{deletedHero}}
+    </small>
+  </h4>
+</div>
+
+<ng-template #noExistDeletedHeroes>
+  <h4>{{heroNotDeletedText}}</h4>
+</ng-template>

@@ -1,0 +1,35 @@
+<dl>
+  <td>{{heroNameText}}</td>
+  <dd>{{heroName}}</dd>
+
+  <td>{{heroAgeText}}</td>
+  <dd>{{heroAge}}</dd>
+
+  <td>{{heroMethodText}}</td>
+  <dd>{{getHeroDescription()}}</dd>
+
+  <td>{{heroCapitalizedText}}</td>
+  <dd>{{heroName | uppercase}}</dd>
+</dl>
+
+<button
+  *ngIf="heroChangeNameButtonIsAvailable"
+  class="btn btn-primary mx-2"
+  (click)="setHeroName(heroChangeNameExampleValue)"
+>
+  {{heroChangeNameButtonText}}
+</button>
+<button
+  *ngIf="heroChangeAgeButtonIsAvailable"
+  class="btn btn-primary mx-2"
+  (click)="setHeroAge(heroChangeAgeExampleValue)"
+>
+  {{heroChangeAgeButtonText}}
+</button>
+<button
+  *ngIf="heroResetButtonIsAvailable"
+  class="btn btn-primary"
+  (click)="reset()"
+>
+  {{heroResetButtonText}}
+</button>
