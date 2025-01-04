@@ -5,11 +5,18 @@
 <div class="row">
 
   <div class="col">
-    <app-heroes-list></app-heroes-list>
+    <app-heroes-list
+      [heroesList]="heroesList"
+      (onDeleteHero)="deleteHero($event)"
+    >
+    </app-heroes-list>
   </div>
 
   <div class="col">
-    <app-add-form></app-add-form>
+    <app-add-form
+      (onNewHero)="addNewHero($event)"
+    >
+    </app-add-form>
   </div>
-  
+
 </div>

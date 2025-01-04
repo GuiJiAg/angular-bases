@@ -1,14 +1,21 @@
 <h4>{{addFormTitle}}</h4>
-<form class="row">
+<form
+  class="row"
+  (ngSubmit)="emitHero()"
+>
   <input
+    name="{{inputHeroNameName}}"
     type="text"
-    placeholder="Nombre"
+    placeholder="{{inputHeroNamePlaceholder}}"
     class="from-control mb-2"
+    [(ngModel)]="inputHero.name"
   >
   <input
-    type="text"
-    placeholder="Poder"
+    name="{{inputHeroPowerName}}"
+    type="number"
+    placeholder="{{inputHeroPowerPlaceholder}}"
     class="from-control mb-2"
+    [(ngModel)]="inputHero.power"
   >
   <button
     type="submit"

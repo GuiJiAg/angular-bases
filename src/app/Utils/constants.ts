@@ -2,6 +2,7 @@ export class Constants {
   /* GENERICS */
   public EMPTY_TEXT: string = '';
   public ZERO_NUMBER: number = 0;
+  public ONE_NUMBER: number = 1;
   public BOOLEAN_TRUE: boolean = true;
   public BOOLEAN_FALSE: boolean = false;
 
@@ -41,8 +42,20 @@ export class Constants {
   public DBZ_MAIN_PAGE_FIRST_HERO_POWER: number = 10000;
   public DBZ_MAIN_PAGE_SECOND_HERO_NAME: string = 'Krillin';
   public DBZ_MAIN_PAGE_SECOND_HERO_POWER: number = 500;
+  public DBZ_MAIN_PAGE_THIRD_HERO_NAME: string = 'Piccolo';
+  public DBZ_MAIN_PAGE_THIRD_HERO_POWER: number = 5000;
+  public DBZ_MAIN_PAGE_FOURTH_HERO_NAME: string = 'Vegeta';
+  public DBZ_MAIN_PAGE_FOURTH_HERO_POWER: number = 9800;
   public DBZ_MAIN_PAGE_FORM_TITLE_TEXT: string = 'Agregar Personaje:';
   public DBZ_MAIN_PAGE_ADD_BUTTON_TEXT: string = 'Agregar';
+  public DBZ_HEROES_LIST_EVEN_HERO_CLASS_LIST: string = 'list-group-item-primary';
+  public DBZ_HEROES_LIST_DELETE_HERO_SYMBOL: string = 'X';
+  public DBZ_ADD_FORM_INPUT_HERO_NAME_NAME: string = 'Nombre';
+  public DBZ_ADD_FORM_INPUT_HERO_POWER_NAME: string = 'Poder';
+  public DBZ_ADD_FORM_INPUT_HERO_NAME_PLACEHOLDER: string = 'Nombre';
+  public DBZ_ADD_FORM_INPUT_HERO_POWER_PLACEHOLDER: number = this.ZERO_NUMBER;
+  public DBZ_ADD_FORM_INPUT_HERO_NAME_INIT_VALUE: string = this.EMPTY_TEXT;
+  public DBZ_ADD_FORM_INPUT_HERO_POWER_INIT_VALUE: number = this.ZERO_NUMBER;
 
   constructor() {}
 }

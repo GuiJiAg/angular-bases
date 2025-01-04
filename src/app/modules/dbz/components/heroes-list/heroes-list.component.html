@@ -1,5 +1,26 @@
 <h4>{{listTitle}}</h4>
 <ul class="list-group">
-  <li class="list-group-item">{{firstHeroName}} - {{firstHeroPower}}</li>
-  <li class="list-group-item">{{secondHeroName}} - {{secondHeroPower}}</li>
+  <li
+    *ngFor="
+      let hero of heroesList;
+      index as index;
+      even as even;
+    "
+    class="list-group-item d-flex justify-content-between align-items-center"
+    [ngClass]="initEvenHeroClassList(even)"
+  >
+    <div>
+      <span class="text-primary">{{index + 1}}</span>&nbsp;
+      <strong>{{hero.name}}</strong>&nbsp;
+      -&nbsp;
+      {{hero.power}}
+    </div>
+
+    <button
+      class="btn btn-danger"
+      (click)="eventDeleteHero(hero.id)"
+    >
+      {{deleteHeroSymbol}}
+    </button>
+  </li>
 </ul>
